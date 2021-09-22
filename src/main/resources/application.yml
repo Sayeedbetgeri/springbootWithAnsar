@@ -1,0 +1,14 @@
+server:
+  port: 8054
+
+spring:
+  application:
+    name: MyApp
+#  data:
+#    mongodb:
+#      database: mytestdb
+#      uri: mongodb://localhost:27017
+
+logging.level.org:
+  springframework.web: DEBUG
+
