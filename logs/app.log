@@ -1,0 +1,50 @@
+2021-09-23 10:50:50,503 DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter [main] ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2021-09-23 10:50:50,636 DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [main] 9 mappings in 'requestMappingHandlerMapping'
+2021-09-23 10:50:50,678 DEBUG org.springframework.web.servlet.handler.SimpleUrlHandlerMapping [main] Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2021-09-23 10:50:50,691 DEBUG org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver [main] ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
+2021-09-23 10:51:15,161 INFO org.springframework.web.servlet.DispatcherServlet [http-nio-8054-exec-2] Initializing Servlet 'dispatcherServlet'
+2021-09-23 10:51:15,162 DEBUG org.springframework.web.servlet.DispatcherServlet [http-nio-8054-exec-2] Detected StandardServletMultipartResolver
+2021-09-23 10:51:15,162 DEBUG org.springframework.web.servlet.DispatcherServlet [http-nio-8054-exec-2] Detected AcceptHeaderLocaleResolver
+2021-09-23 10:51:15,162 DEBUG org.springframework.web.servlet.DispatcherServlet [http-nio-8054-exec-2] Detected FixedThemeResolver
+2021-09-23 10:51:15,164 DEBUG org.springframework.web.servlet.DispatcherServlet [http-nio-8054-exec-2] Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@4b2913c7
+2021-09-23 10:51:15,164 DEBUG org.springframework.web.servlet.DispatcherServlet [http-nio-8054-exec-2] Detected org.springframework.web.servlet.support.SessionFlashMapManager@5d1f0988
+2021-09-23 10:51:15,164 DEBUG org.springframework.web.servlet.DispatcherServlet [http-nio-8054-exec-2] enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2021-09-23 10:51:15,164 INFO org.springframework.web.servlet.DispatcherServlet [http-nio-8054-exec-2] Completed initialization in 2 ms
+2021-09-23 10:51:15,182 DEBUG org.springframework.web.servlet.DispatcherServlet [http-nio-8054-exec-2] GET "/v1/getItems", parameters={}
+2021-09-23 10:51:15,188 DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [http-nio-8054-exec-2] Mapped to com.myapp.controller.V1Controller#getItems()
+2021-09-23 10:51:15,362 DEBUG org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver [http-nio-8054-exec-2] Using @ExceptionHandler com.myapp.exception.GlobalExceptionHandler#internalServerError(Exception)
+2021-09-23 10:51:15,377 DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor [http-nio-8054-exec-2] Using 'text/plain', given [*/*] and supported [text/plain, */*, text/plain, */*, application/json, application/*+json, application/json, application/*+json]
+2021-09-23 10:51:15,378 DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor [http-nio-8054-exec-2] Writing ["message my Exception"]
+2021-09-23 10:51:15,393 DEBUG org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver [http-nio-8054-exec-2] Resolved [java.lang.ArrayIndexOutOfBoundsException: message]
+2021-09-23 10:51:15,393 DEBUG org.springframework.web.servlet.DispatcherServlet [http-nio-8054-exec-2] Completed 404 NOT_FOUND
+2021-09-23 11:28:47,758 DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter [main] ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2021-09-23 11:28:47,866 DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [main] 9 mappings in 'requestMappingHandlerMapping'
+2021-09-23 11:28:47,899 DEBUG org.springframework.web.servlet.handler.SimpleUrlHandlerMapping [main] Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2021-09-23 11:28:47,909 DEBUG org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver [main] ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
+2021-09-23 11:30:35,166 DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter [main] ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2021-09-23 11:30:35,290 DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [main] 9 mappings in 'requestMappingHandlerMapping'
+2021-09-23 11:30:35,329 DEBUG org.springframework.web.servlet.handler.SimpleUrlHandlerMapping [main] Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2021-09-23 11:30:35,339 DEBUG org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver [main] ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
+2021-09-23 11:30:53,026 INFO org.springframework.web.servlet.DispatcherServlet [http-nio-8054-exec-2] Initializing Servlet 'dispatcherServlet'
+2021-09-23 11:30:53,026 DEBUG org.springframework.web.servlet.DispatcherServlet [http-nio-8054-exec-2] Detected StandardServletMultipartResolver
+2021-09-23 11:30:53,026 DEBUG org.springframework.web.servlet.DispatcherServlet [http-nio-8054-exec-2] Detected AcceptHeaderLocaleResolver
+2021-09-23 11:30:53,026 DEBUG org.springframework.web.servlet.DispatcherServlet [http-nio-8054-exec-2] Detected FixedThemeResolver
+2021-09-23 11:30:53,027 DEBUG org.springframework.web.servlet.DispatcherServlet [http-nio-8054-exec-2] Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@24f43993
+2021-09-23 11:30:53,028 DEBUG org.springframework.web.servlet.DispatcherServlet [http-nio-8054-exec-2] Detected org.springframework.web.servlet.support.SessionFlashMapManager@524fdfdf
+2021-09-23 11:30:53,028 DEBUG org.springframework.web.servlet.DispatcherServlet [http-nio-8054-exec-2] enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2021-09-23 11:30:53,028 INFO org.springframework.web.servlet.DispatcherServlet [http-nio-8054-exec-2] Completed initialization in 2 ms
+2021-09-23 11:30:53,039 DEBUG org.springframework.web.servlet.DispatcherServlet [http-nio-8054-exec-2] GET "/v1/getItems", parameters={}
+2021-09-23 11:30:53,042 DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [http-nio-8054-exec-2] Mapped to com.myapp.controller.V1Controller#getItems()
+2021-09-23 11:30:53,165 DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor [http-nio-8054-exec-2] Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
+2021-09-23 11:30:53,165 DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor [http-nio-8054-exec-2] Writing [[FoodItem{itemId=2, itemName='Soup', itemCost=75.0, available=true}, FoodItem{itemId=1, itemName='No (truncated)...]
+2021-09-23 11:30:53,219 DEBUG org.springframework.web.servlet.DispatcherServlet [http-nio-8054-exec-2] Completed 200 OK
+2021-09-23 11:35:15,277 DEBUG org.springframework.web.context.support.GenericWebApplicationContext [Test worker] Refreshing org.springframework.web.context.support.GenericWebApplicationContext@18931076
+2021-09-23 11:35:17,910 DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter [Test worker] ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2021-09-23 11:35:18,055 DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [Test worker] 9 mappings in 'requestMappingHandlerMapping'
+2021-09-23 11:35:18,194 DEBUG org.springframework.web.servlet.handler.SimpleUrlHandlerMapping [Test worker] Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2021-09-23 11:35:18,225 DEBUG org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver [Test worker] ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
+2021-09-23 11:35:18,900 DEBUG org.springframework.web.context.support.GenericWebApplicationContext [SpringApplicationShutdownHook] Closing org.springframework.web.context.support.GenericWebApplicationContext@18931076, started on Thu Sep 23 11:35:15 IST 2021
+2021-09-23 16:52:29,348 DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter [main] ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2021-09-23 16:52:29,467 DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping [main] 9 mappings in 'requestMappingHandlerMapping'
+2021-09-23 16:52:29,504 DEBUG org.springframework.web.servlet.handler.SimpleUrlHandlerMapping [main] Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2021-09-23 16:52:29,517 DEBUG org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver [main] ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice

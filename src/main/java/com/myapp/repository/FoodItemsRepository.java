@@ -6,12 +6,11 @@ import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
-//@Repository
-public interface FoodItemsRepository
-        //extends MongoRepository<FoodItem,Integer>
-{
+@Repository
+public interface FoodItemsRepository extends MongoRepository<FoodItem,Integer>{
 
-//    public FoodItem findByItemName(String itemName);
-//    public List<FoodItem> findByAvailable(Boolean available);
+    public FoodItem findByItemName(String itemName);
+    public List<FoodItem> findByAvailable(Boolean available);
+    public List<FoodItem> findByItemNameAndAvailable(String itemName, Boolean available);
 
 }

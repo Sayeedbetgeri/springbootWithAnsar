@@ -10,32 +10,32 @@ public class GlobalExceptionHandler {
 
     @ExceptionHandler(FoodItemException.class)
     @ResponseStatus(HttpStatus.NOT_FOUND)
-    public String foodItemNotFoundException(FoodItemException ex) {
-        return buildMyException(ex.getMessage());
+    public ExceptionDTO foodItemNotFoundException(FoodItemException ex) {
+        return new ExceptionDTO(HttpStatus.NOT_FOUND.value(),buildMyException(ex.getMessage()));
     }
 
     @ExceptionHandler(HttpClientErrorException.UnprocessableEntity.class)
     @ResponseStatus(HttpStatus.UNPROCESSABLE_ENTITY)
-    public String unprocessableEntity(FoodItemException ex) {
-        return buildMyException(ex.getMessage());
-    }
-
-    @ExceptionHandler(Exception.class)
-    @ResponseStatus(HttpStatus.NOT_FOUND)
-    public String internalServerError(Exception ex) {
-        return buildMyException(ex.getMessage());
+    public ExceptionDTO unprocessableEntity(FoodItemException ex) {
+        return new ExceptionDTO(HttpStatus.NOT_FOUND.value(),buildMyException(ex.getMessage()));
     }
 
     @ExceptionHandler(JsonParseException.class)
     @ResponseStatus(HttpStatus.INTERNAL_SERVER_ERROR)
-    public String jsonParseException(FoodItemException ex) {
-        return buildMyException(ex.getMessage());
+    public ExceptionDTO jsonParseException(FoodItemException ex) {
+        return new ExceptionDTO(HttpStatus.NOT_FOUND.value(), buildMyException(ex.getMessage()));
+    }
+
+    @ExceptionHandler(Exception.class)
+    @ResponseStatus(HttpStatus.NOT_FOUND)
+    public ExceptionDTO internalServerError(Exception ex) {
+        return new ExceptionDTO(HttpStatus.NOT_FOUND.value(),buildMyException(ex.getMessage()));
     }
 
     private String buildMyException(String message)
     {
 
-        return message + " my Exception";
+        return  "my Exception :  " + message ;
     }
 
 }

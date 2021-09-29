@@ -16,10 +16,6 @@ public class V1Controller {
     @Autowired
     private ItemService itemService;
 
-//    @GetMapping("/getItems")
-//    public String getItems() {
-//        return "hello";
-//    }
 
     @GetMapping("/getItems")
     public List<FoodItem> getItems() {
@@ -48,7 +44,7 @@ public class V1Controller {
             itemService.deleteFoodItem(foodItem);
         }catch (Exception ex)
         {
-            throw new FoodItemException("Unable to delete Food Item");
+            throw new FoodItemException(" Unable to delete Food Item");
         }
     }
 

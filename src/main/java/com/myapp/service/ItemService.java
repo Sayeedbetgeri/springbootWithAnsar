@@ -1,6 +1,7 @@
 package com.myapp.service;
 
 import com.myapp.dto.FoodItem;
+import com.myapp.exception.FoodItemException;
 import com.myapp.repository.FoodItemRepositoryImpl;
 import com.myapp.repository.FoodItemsRepository;
 import org.slf4j.Logger;
@@ -25,10 +26,15 @@ public class ItemService {
     @Autowired
     private FoodItemsRepository foodItemsRepository;
 
-    private List<FoodItem> getFoodItems(){
-        FoodItem foodItem = new FoodItem("Noodles",50.0,true);
+
+    private List<FoodItem> getFoodItems() {
+
+        logger.info("Executing getFoodItems ");
+        FoodItem foodItem = new FoodItem("Noodles", 50.0, true);
+
+        logger.debug("Food items available : {}", foodItem);
         list.add(foodItem);
-        return  list;
+        return list;
     }
 //    public List<String> getAllItems()
 //    {
@@ -36,55 +42,58 @@ public class ItemService {
 //    }
 
     public List<FoodItem> getAllItems() {
+        List<FoodItem> foodItems = new ArrayList<>();
+        try {
+            logger.info("calling get All Items query");
+            foodItems = foodItemsRepository.findAll();
+            if (foodItems.isEmpty()) {
+                throw new FoodItemException("No Food Items found");
+            }
+        } catch (ArrayIndexOutOfBoundsException e) {
 
-//        logger.info("calling get All Items query");
-//        List<FoodItem> foodItems =  foodItemsRepository.findAll();
-////        if(foodItems.isEmpty())
-////        {
-//            throw new ArrayIndexOutOfBoundsException("message");
-////        }
-//        return foodItems;
-    return null;
+            logger.warn("Exeption caused during getting all items available :  ", e.getCause());
+            throw new ArrayIndexOutOfBoundsException("message");
+        }
+        return foodItems;
     }
 
 
     public FoodItem saveFoodItem(FoodItem foodItem) {
-        logger.info("saving food item {}",foodItem);
+        logger.info("saving food item {}", foodItem);
 
-//        return foodItemsRepository.save(foodItem);
-        return null;
+        return foodItemsRepository.save(foodItem);
     }
 
     public FoodItem findByItemName(String foodItem) {
 
-        logger.info("calling get food item by name : {}",foodItem);
+        logger.info("calling get food item by name : {}", foodItem);
 
-        return null;//foodItemsRepository.findByItemName(foodItem);
+        return foodItemsRepository.findByItemName(foodItem);
     }
 
     public List<FoodItem> findByAvailablle(Boolean foodItem) {
-        logger.info("calling get all food items by avialbility : {}",foodItem);
+        logger.info("calling get all food items by avialbility : {}", foodItem);
 
-        return null;//foodItemsRepository.findByAvailable(foodItem);
+        return foodItemsRepository.findByAvailable(foodItem);
     }
 
     public List<FoodItem> findByFoodItemName(String itemName) {
-        logger.info("calling get All Items by Name : {}",itemName);
+        logger.info("calling get All Items by Name : {}", itemName);
 
 
-        return null;// foodItemRepositoryImpl.getFoodItemByItemName(itemName);
+        return foodItemRepositoryImpl.getFoodItemByItemName(itemName);
     }
 
     public FoodItem updateFoodItem(FoodItem foodItem) {
         logger.info("updating food item : {}", foodItem);
 
-        return null;// foodItemsRepository.save(foodItem);
+        return foodItemsRepository.save(foodItem);
 
     }
 
     public void deleteFoodItem(FoodItem foodItem) {
-        logger.info("deleting food item : {}",foodItem);
+        logger.info("deleting food item : {}", foodItem);
 
-        //foodItemsRepository.delete(foodItem);
+        foodItemsRepository.delete(foodItem);
     }
 }
