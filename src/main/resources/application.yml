@@ -11,12 +11,14 @@ spring:
 
 logging.level.org:
   springframework.web: DEBUG
+  com.myapp.ItemService: INFO
 
 management:
   endpoints:
     enabled-by-default: true
     info:
       enabled: true
+
 
 
 

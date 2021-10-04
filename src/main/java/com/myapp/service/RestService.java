@@ -17,7 +17,7 @@ public class RestService {
 
     public String getQuote() {
         return restTemplate.getForObject(
-                url, String.class);
+                "http://localhost:8090/v1/getRestResponseEntity", String.class);
     }
 
 

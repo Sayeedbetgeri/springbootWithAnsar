@@ -2,7 +2,7 @@
 package com.myapp.dto;
 
 import com.fasterxml.jackson.annotation.JsonAlias;
-
+import org.springframework.data.mongodb.repository.config.EnableMongoRepositories;
 
 public class Data {
 
@@ -35,5 +35,6 @@ public class Data {
     public String getProfileImage() {
         return profileImage;
     }
+
 
 }
