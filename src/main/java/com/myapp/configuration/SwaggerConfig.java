@@ -19,13 +19,14 @@ public class SwaggerConfig {
     private ApiInfo apiInfo = new ApiInfo(
             "myapp",
             "hello",
-            "V3",
+            "V1",
             "",
             new Contact("", "", ""),
             "",
             "",
             new ArrayList<>()
     );
+
     @Bean
     public Docket api() {
         return new Docket(DocumentationType.SWAGGER_2)

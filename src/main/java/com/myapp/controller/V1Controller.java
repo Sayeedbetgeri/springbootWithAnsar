@@ -3,10 +3,16 @@ package com.myapp.controller;
 
 import com.myapp.dto.FoodItem;
 import com.myapp.dto.MenuItem;
+import com.myapp.exception.ExceptionDTO;
 import com.myapp.exception.FoodItemException;
 import com.myapp.service.ItemService;
+import io.swagger.annotations.ApiOperation;
+import io.swagger.annotations.ApiParam;
+import io.swagger.annotations.ApiResponse;
+import io.swagger.annotations.ApiResponses;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
+import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -45,7 +51,9 @@ public class V1Controller {
     }
 
     @GetMapping("/getMenuByCategory/{category}")
-    public MenuItem getAllMenuItems(@PathVariable String category) {
+    public MenuItem getAllMenuItems(
+            @ApiParam(name = "category", value = "category", defaultValue = "Starters")
+            @PathVariable("category") String category) {
         return itemService.getMenuItemByCategory(category);
     }
 
@@ -74,7 +82,14 @@ public class V1Controller {
     }
 
     @DeleteMapping("/delete")
-    public void deleteFoodItem(@RequestBody FoodItem foodItem) {
+    @ApiOperation(value = "This Api will delete the Food item from FoodItem repository",notes = "Delete Food Item")
+    @ApiResponses({
+            @ApiResponse(code = 500, message = "Internal Server Error", response = ExceptionDTO.class),
+            @ApiResponse(code = 404, message = "Item Not Found", response = ExceptionDTO.class)
+    })
+    public void deleteFoodItem(
+            @ApiParam(name = "Request Body for FoodItem", value = "FoodItem Object", example = "{itemName:Noodles}")
+            @RequestBody FoodItem foodItem) {
         try {
             itemService.deleteFoodItem(foodItem);
         } catch (Exception ex) {
